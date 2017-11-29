@@ -1,0 +1,89 @@
+// Declare the reusable variables
+$bg-color:#333;
+$font-color:#fff;
+$primary-color:#008ed6;
+
+$dark-overlay:rgba(0, 0, 0, 0.637);
+$landing-icon-size:30px;
+
+//style the body
+body{
+    background: $bg-color;
+    color:$font-color;
+}
+
+.navbar{
+    border-bottom: $primary-color 3px solid;
+    opacity: 0.8;
+}
+
+
+// Fix the Humberger button overlapping with the logo when the page is resized. This happens because container is put inside the nav
+@media(max-width:576px){
+    nav .container {
+        width:100%;
+    }
+}
+
+
+// Fix the home section for proper alignmment
+
+#home-section{
+    background: url('../img/class-min.jpg') no-repeat center top fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 700px;
+
+    .dark-overlay{ 
+        background-color: $dark-overlay;
+        position: absolute; 
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 700px;
+    }
+
+    .home-inner{
+        padding-top: 150px;
+    }
+
+    .card-form{
+      opacity: 0.8;  
+    }
+
+    .fa{
+        color: $primary-color;
+        background: #fff;
+        padding:4px;
+        border-radius: 5px;
+        font-size: $landing-icon-size;
+    }
+}
+
+#explore-section #share-section{
+    .fa{ //the check boxes 
+        color: #fff;
+        background: #333;
+        padding: 4px;
+        border-radius: 5px;
+        font-size: $landing-icon-size;
+    }
+}
+
+#create-section{
+    .fa{ //the check boxes 
+        color: $primary-color;
+        background:#fff;
+        padding: 4px;
+        border-radius: 5px;
+        font-size: $landing-icon-size;
+    }
+}
+
+.modal{
+    color: #333
+}
+// .navbar-brand{
+//     font-family: 'Indie Flower', serif;
+//     font-size: 20;
+// }
